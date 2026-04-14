@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class UseContainer {
+public class UserController {
     private final String USERNAME = "admin";
     private final String PASSWORD = "20230140039";
 
@@ -28,3 +28,8 @@ public class UseContainer {
             return "login";
         }
     }
+    @GetMapping("/home")
+    public String homapage() {
+        return "home";
+    }
+}
